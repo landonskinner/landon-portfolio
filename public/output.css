@@ -554,22 +554,191 @@ video {
   --tw-contain-style:  ;
 }
 
-.bg-red-400 {
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-\[100vh\] {
+  top: 100vh;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.mt-\[60vh\] {
+  margin-top: 60vh;
+}
+
+.mt-\[50vh\] {
+  margin-top: 50vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+@keyframes enterLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  60% {
+    transform: translateX(20%) skew(-10deg);
+  }
+
+  80% {
+    transform: translateX(-15%) skew(5deg);
+  }
+
+  100% {
+    transform: translateX(-5%) skew(0deg);
+  }
+}
+
+.animate-enter-left {
+  animation: enterLeft 1s ease forwards;
+}
+
+@keyframes enterRight {
+  0% {
+    transform: translateX(200%);
+  }
+
+  60% {
+    transform: translateX(-20%) skew(10deg);
+  }
+
+  80% {
+    transform: translateX(15%) skew(-5deg);
+  }
+
+  100% {
+    transform: translateX(5%) skew(0deg);
+  }
+}
+
+.animate-enter-right {
+  animation: enterRight 1s ease forwards;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-\[\#5F63AA\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+  background-color: rgb(95 99 170 / var(--tw-bg-opacity));
 }
 
-.bg-red-700 {
+.bg-\[\#FAF2E6\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+  background-color: rgb(250 242 230 / var(--tw-bg-opacity));
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.bg-hero-pattern {
+  background-image: url("/images/background.svg");
 }
 
-.text-5xl {
-  font-size: 3rem;
+.bg-\[length\:auto_150vh\] {
+  background-size: auto 150vh;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.leading-none {
   line-height: 1;
+}
+
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
+.text-\[\#FAF2E6\] {
+  --tw-text-opacity: 1;
+  color: rgb(250 242 230 / var(--tw-text-opacity));
+}
+
+/* TODO: integrate font with tailwind config */
+
+@font-face {
+  font-family: "Wonder";
+
+  src: url("/fonts/wonder.otf") format("opentype");
+}
+
+:root {
+  --initial-font-size: 20vw;
+  --final-font-size: 5vw;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+#title-section {
+  font-family: Wonder, sans-serif;
+  font-size: var(--initial-font-size);
+  animation: shrink linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0% 100%;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #5f63aa;
+}
+
+@keyframes shrink {
+  33%,
+  100% {
+    font-size: var(--final-font-size);
+    height: calc(var(--final-font-size) * 2 + 24px);
+  }
 }

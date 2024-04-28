@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-scrollbar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Landon Skinner</title>
+    <!-- polyfill for scroll animation support -->
+    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
     <link href="/public/output.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Welcome to My Portfolio</h1>
     <!-- Your content goes here -->
+    <section
+      id="title-section"
+      class="fixed top-0 leading-none tracking-tighter h-screen w-screen bg-hero-pattern bg-[length:auto_150vh] bg-center bg-no-repeat text-[#FAF2E6] z-10 inline-flex text-center flex-col items-center justify-center"
+    >
+      <h1 class="animate-enter-left">Landon</h1>
+      <h2 class="animate-enter-right">Skinner</h2>
+    </section>
+    <section
+      id="about-me-section"
+      class="h-screen w-screen bg-[#FAF2E6] mt-[60vh] relative flex items-center justify-center"
+    >
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet
+          rhoncus velit, non mattis sapien feugiat sit amet. Donec pellentesque,
+          enim egestas ultrices fringilla, tellus ipsum dignissim magna, eget
+          tincidunt est nulla ac elit. Nulla iaculis orci metus, ut fermentum
+          leo tempus id.
+        </p>
+      </section>
+    </section>
+    <section class="bg-[#5F63AA] h-screen flex items-center justify-center">
+      Tech stack
+    </section>
   </body>
 </html>
