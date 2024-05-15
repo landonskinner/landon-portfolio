@@ -7,32 +7,112 @@
     <!-- polyfill for scroll animation support -->
     <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
     <link href="/public/output.css" rel="stylesheet" />
+    <script src="index.js"></script>
   </head>
   <body>
-    <!-- Your content goes here -->
     <section
       id="title-section"
-      class="fixed top-0 leading-none tracking-tighter h-screen w-screen bg-hero-pattern bg-[length:auto_150vh] bg-center bg-no-repeat text-[#FAF2E6] z-10 inline-flex text-center flex-col items-center justify-center"
+      class="fixed font-wonder top-0 border-b-2 border-primary text-stroke text-xl leading-none tracking-tighter h-screen w-screen bg-hero-pattern bg-[length:auto_150vh] bg-center bg-no-repeat text-secondary z-[100] inline-flex text-center flex-col items-center justify-center"
     >
       <h1 class="animate-enter-left">Landon</h1>
       <h2 class="animate-enter-right">Skinner</h2>
     </section>
     <section
       id="about-me-section"
-      class="h-screen w-screen bg-[#FAF2E6] mt-[60vh] relative flex items-center justify-center"
+      class="w-screen min-h-screen pt-[30vh] pb-8 bg-secondary flex flex-col px-8 justify-center items-center"
     >
-      <section>
+      <h2
+        id="about-me"
+        class="font-wonder text-stroke text-secondary z-10 text-md sm:text-sm top-2 relative"
+      >
+        About me
+      </h2>
+      <section
+        class="max-w-xl bg-primary rounded-xl p-8 text-secondary space-y-8"
+      >
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet
-          rhoncus velit, non mattis sapien feugiat sit amet. Donec pellentesque,
-          enim egestas ultrices fringilla, tellus ipsum dignissim magna, eget
-          tincidunt est nulla ac elit. Nulla iaculis orci metus, ut fermentum
-          leo tempus id.
+          In 2021, I graduated from Villanova University with a degree in
+          Chemical Engineering. I quickly realized that I desired a more dynamic
+          and creative career field. Since this realization, I have completed an
+          immersive software engineering bootcamp and have been working as a
+          full-stack developer for the past 2 years.
+        </p>
+        <p>
+          Currently, I work at Gartner as a Software Engineer I, building and
+          maintaining client-facing Forms-as-a-service projects for
+          implementation by our internal engineering teams. As part of this
+          team, I've been fortunate to gain experience in analytics, performance
+          optimization, and pixel-perfect design implementation.
+        </p>
+        <p>
+          I am passionate about building software that is both functional and
+          beautiful. I am always looking for new opportunities to learn and grow
+          as a developer.
         </p>
       </section>
     </section>
-    <section class="bg-[#5F63AA] h-screen flex items-center justify-center">
-      Tech stack
+    <section
+      id="skills-section"
+      class="font-wonder bg-primary text-secondary text-lg sm:text-md py-8 whitespace-nowrap overflow-y-hidden h-fit w-screen inline-flex flex-col items-center justify-evenly overflow-x-hidden"
+    >
+      <div
+        class="flex w-fit gap-x-32 justify-evenly items-center before:content-[''] before:absolute before:top-1/2 before:w-full before:h-2 before:right-[calc(100%_+_48px)] before:rounded-md before:bg-secondary before:-translate-y-1/2"
+      >
+        <p>NextJS</p>
+        <p>TailwindCSS</p>
+        <p>TypeScript</p>
+      </div>
+      <div
+        class="flex w-fit gap-x-32 justify-evenly items-center before:content-[''] before:absolute before:top-1/2 before:w-full before:h-2 before:left-[calc(100%_+_48px)] before:rounded-md before:bg-secondary before:-translate-y-1/2"
+      >
+        <p>NodeJS</p>
+        <p>Jest</p>
+        <p>Vercel</p>
+      </div>
+      <div
+        class="flex w-fit gap-x-32 justify-evenly items-center before:content-[''] before:absolute before:top-1/2 before:w-full before:h-2 before:right-[calc(100%_+_48px)] before:rounded-md before:bg-secondary before:-translate-y-1/2"
+      >
+        <p>LaunchDarkly</p>
+        <p>Optimizely</p>
+        <p>Contentful</p>
+      </div>
+      <div
+        class="flex w-fit gap-x-32 justify-evenly items-center before:content-[''] before:absolute before:top-1/2 before:w-full before:h-2 before:left-[calc(100%_+_48px)] before:rounded-md before:bg-secondary before:-translate-y-1/2"
+      >
+        <p>Datadog</p>
+        <p>Google Analytics</p>
+        <p>Tag Manager</p>
+      </div>
+    </section>
+
+    <section
+      id="contact-section"
+      class="font-wonder w-screen h-[calc(100vh-(10vw_+_24px))] bg-secondary text-lg sm:text-md flex flex-col p-8 justify-center items-center"
+    >
+      <a
+        class="text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
+        href="mailto:landonjskinner@gmail.com"
+        target="_blank"
+        >Email</a
+      >
+      <a
+        class="text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
+        href="https://www.linkedin.com/in/landon-skinner/"
+        target="_blank"
+        >LinkedIn</a
+      >
+      <a
+        class="text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
+        href="https://github.com/landonskinner"
+        target="_blank"
+        >GitHub</a
+      >
+      <a
+        class="text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
+        href="/resume"
+        target="_blank"
+        >Resume</a
+      >
     </section>
   </body>
 </html>

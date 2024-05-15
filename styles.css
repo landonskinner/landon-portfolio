@@ -2,7 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* TODO: integrate font with tailwind config */
 @font-face {
   font-family: "Wonder";
   src: url("/fonts/wonder.otf") format("opentype");
@@ -23,14 +22,31 @@
   scrollbar-width: none; /* Firefox */
 }
 
-#title-section {
-  font-family: Wonder, sans-serif;
-  font-size: var(--initial-font-size);
-  animation: shrink linear forwards;
-  animation-timeline: scroll();
-  animation-range: 0% 100%;
+.text-stroke {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #5f63aa;
+}
+
+.text-stroke-links {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #5f63aa;
+  -webkit-text-fill-color: transparent;
+}
+
+#title-section {
+  animation: shrink linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0% 33%;
+}
+
+#skills-section > div:nth-of-type(odd) {
+  animation: scrollLeft linear forwards;
+  animation-timeline: scroll(root);
+}
+
+#skills-section > div:nth-of-type(even) {
+  animation: scrollRight linear forwards;
+  animation-timeline: scroll(root);
 }
 
 @keyframes shrink {
@@ -38,5 +54,17 @@
   100% {
     font-size: var(--final-font-size);
     height: calc(var(--final-font-size) * 2 + 24px);
+  }
+}
+
+@keyframes scrollLeft {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scrollRight {
+  100% {
+    transform: translateX(-100%);
   }
 }

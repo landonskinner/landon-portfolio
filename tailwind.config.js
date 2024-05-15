@@ -10,6 +10,19 @@ module.exports = {
         "enter-left": "enterLeft 1s ease forwards",
         "enter-right": "enterRight 1s ease forwards",
       },
+      fontFamily: {
+        wonder: ["Wonder", "sans-serif"],
+      },
+      fontSize: {
+        sm: "var(--final-font-size)",
+        md: "10vw",
+        lg: "15vw",
+        xl: "var(--initial-font-size)",
+      },
+      colors: {
+        primary: "#5F63AA",
+        secondary: "#FAF2E6",
+      },
       keyframes: {
         enterLeft: {
           "0%": {
