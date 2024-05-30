@@ -8,6 +8,57 @@
     <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
     <link href="/public/output.css" rel="stylesheet" />
     <script src="index.js"></script>
+    <style>
+      #title-section {
+        animation: shrink linear forwards;
+        animation-timeline: scroll();
+        animation-range: 0% 33%;
+      }
+
+      @media screen and (max-width: 640px) {
+        #title-section {
+          animation-name: shrinkSmall;
+        }
+      }
+
+      #skills-section > div:nth-of-type(odd) {
+        animation: scrollLeft linear forwards;
+        animation-timeline: scroll(root);
+      }
+
+      #skills-section > div:nth-of-type(even) {
+        animation: scrollRight linear forwards;
+        animation-timeline: scroll(root);
+      }
+
+      @keyframes shrink {
+        33%,
+        100% {
+          font-size: var(--final-font-size);
+          height: calc(var(--final-font-size) * 2 + 24px);
+        }
+      }
+
+      @keyframes shrinkSmall {
+        33%,
+        100% {
+          font-size: 10vw;
+          height: calc(10vw * 2 + 24px);
+        }
+      }
+
+      @keyframes scrollLeft {
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @keyframes scrollRight {
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
   </head>
   <body>
     <section
