@@ -39,6 +39,12 @@
   animation-range: 0% 33%;
 }
 
+@media screen and (max-width: 640px) {
+  #title-section {
+    animation-name: shrinkSmall;
+  }
+}
+
 #skills-section > div:nth-of-type(odd) {
   animation: scrollLeft linear forwards;
   animation-timeline: scroll(root);
@@ -54,6 +60,14 @@
   100% {
     font-size: var(--final-font-size);
     height: calc(var(--final-font-size) * 2 + 24px);
+  }
+}
+
+@keyframes shrinkSmall {
+  33%,
+  100% {
+    font-size: 10vw;
+    height: calc(10vw * 2 + 24px);
   }
 }
 

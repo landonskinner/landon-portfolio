@@ -19,11 +19,11 @@
     </section>
     <section
       id="about-me-section"
-      class="w-screen min-h-screen pt-[30vh] pb-8 bg-secondary flex flex-col px-8 justify-center items-center"
+      class="w-screen min-h-screen pt-[calc(40vw_+_100px)] sm:pt-[calc(20vw_+_100px)] pb-8 bg-secondary flex flex-col px-8 justify-center items-center"
     >
       <h2
         id="about-me"
-        class="font-wonder text-stroke text-secondary z-10 text-md sm:text-sm top-2 relative"
+        class="font-wonder text-stroke text-secondary z-10 text-md sm:text-sm top-8 relative"
       >
         About me
       </h2>
@@ -53,62 +53,94 @@
     </section>
     <section
       id="skills-section"
-      class="font-wonder bg-primary text-secondary text-lg sm:text-md py-8 whitespace-nowrap overflow-y-hidden h-fit w-screen inline-flex flex-col items-center justify-evenly overflow-x-hidden"
+      class="font-wonder gap-y-12 bg-primary text-secondary text-lg sm:text-md py-8 whitespace-nowrap overflow-y-hidden h-fit w-screen inline-flex flex-col items-center justify-evenly overflow-x-hidden"
     >
       <div
         class="flex w-fit gap-x-32 justify-evenly items-center before:content-[''] before:absolute before:top-1/2 before:w-full before:h-2 before:right-[calc(100%_+_48px)] before:rounded-md before:bg-secondary before:-translate-y-1/2"
       >
-        <p>NextJS</p>
-        <p>TailwindCSS</p>
+        <p
+          class="after:content-[''] after:w-8 after:h-2 after:bg-secondary after:rounded-full after:absolute relative after:top-1/2 after:-right-20 after:-translate-y-1/2"
+        >
+          NextJS
+        </p>
+        <p
+          class="after:content-[''] after:w-8 after:h-2 after:bg-secondary after:rounded-full after:absolute relative after:top-1/2 after:-right-20 after:-translate-y-1/2"
+        >
+          TailwindCSS
+        </p>
         <p>TypeScript</p>
       </div>
       <div
         class="flex w-fit gap-x-32 justify-evenly items-center before:content-[''] before:absolute before:top-1/2 before:w-full before:h-2 before:left-[calc(100%_+_48px)] before:rounded-md before:bg-secondary before:-translate-y-1/2"
       >
-        <p>NodeJS</p>
-        <p>Jest</p>
+        <p
+          class="before:content-[''] before:w-8 before:h-2 before:bg-secondary before:rounded-full before:absolute relative before:top-1/2 before:-right-20 before:-translate-y-1/2"
+        >
+          NodeJS
+        </p>
+        <p
+          class="before:content-[''] before:w-8 before:h-2 before:bg-secondary before:rounded-full before:absolute relative before:top-1/2 before:-right-20 before:-translate-y-1/2"
+        >
+          Jest
+        </p>
         <p>Vercel</p>
       </div>
       <div
         class="flex w-fit gap-x-32 justify-evenly items-center before:content-[''] before:absolute before:top-1/2 before:w-full before:h-2 before:right-[calc(100%_+_48px)] before:rounded-md before:bg-secondary before:-translate-y-1/2"
       >
-        <p>LaunchDarkly</p>
-        <p>Optimizely</p>
+        <p
+          class="after:content-[''] after:w-8 after:h-2 after:bg-secondary after:rounded-full after:absolute relative after:top-1/2 after:-right-20 after:-translate-y-1/2"
+        >
+          LaunchDarkly
+        </p>
+        <p
+          class="after:content-[''] after:w-8 after:h-2 after:bg-secondary after:rounded-full after:absolute relative after:top-1/2 after:-right-20 after:-translate-y-1/2"
+        >
+          Optimizely
+        </p>
         <p>Contentful</p>
       </div>
       <div
         class="flex w-fit gap-x-32 justify-evenly items-center before:content-[''] before:absolute before:top-1/2 before:w-full before:h-2 before:left-[calc(100%_+_48px)] before:rounded-md before:bg-secondary before:-translate-y-1/2"
       >
-        <p>Datadog</p>
-        <p>Google Analytics</p>
+        <p
+          class="before:content-[''] before:w-8 before:h-2 before:bg-secondary before:rounded-full before:absolute relative before:top-1/2 before:-right-20 before:-translate-y-1/2"
+        >
+          Datadog
+        </p>
+        <p
+          class="before:content-[''] before:w-8 before:h-2 before:bg-secondary before:rounded-full before:absolute relative before:top-1/2 before:-right-20 before:-translate-y-1/2"
+        >
+          Google Analytics
+        </p>
         <p>Tag Manager</p>
       </div>
     </section>
 
     <section
       id="contact-section"
-      class="font-wonder w-screen h-[calc(100vh-(10vw_+_24px))] bg-secondary text-lg sm:text-md flex flex-col p-8 justify-center items-center"
+      class="font-wonder leading-none w-screen h-[calc(100vh-(10vw_+_24px))] bg-secondary flex flex-col px-8 py-16 sm:py-8 justify-around items-center"
     >
       <a
-        class="text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
+        class="text-skills text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
         href="mailto:landonjskinner@gmail.com"
         target="_blank"
         >Email</a
       >
       <a
-        class="text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
+        class="text-skills text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
         href="https://www.linkedin.com/in/landon-skinner/"
         target="_blank"
         >LinkedIn</a
       >
       <a
-        class="text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
+        class="text-skills text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
         href="https://github.com/landonskinner"
         target="_blank"
         >GitHub</a
       >
       <a
-        class="text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
+        class="text-skills text-stroke-links bg-hero-pattern bg-repeat bg-clip-text fill-transparent bg-center bg-[length:auto_50vh] sm:bg-[length:auto_100vh] transition-all duration-500 hover:bg-[length:auto_100vh] hover:sm:bg-[length:auto_200vh] hover:tracking-widest"
         href="/resume"
         target="_blank"
         >Resume</a

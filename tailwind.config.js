@@ -15,9 +15,10 @@ module.exports = {
       },
       fontSize: {
         sm: "var(--final-font-size)",
-        md: "10vw",
+        md: "min(10vw,108px)",
         lg: "15vw",
         xl: "var(--initial-font-size)",
+        skills: "min(15vw, 100px)",
       },
       colors: {
         primary: "#5F63AA",
